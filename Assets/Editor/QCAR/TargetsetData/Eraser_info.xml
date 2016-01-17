@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="QCAR_Dataset_config.xsd">
+  <TargetSet version="5.0" toolVersion="4.2.0">
+    <ObjectTarget bbox="0.0 0.0 0.0 142.5 95.0 95.0" captureAppVersion="1.0.0" lastSaved="2016-01-17 07:23:32" name="Dictionary" targetId="e814dc285780452ebeb332ed279c8257" version="2.0" />
+    <ObjectTarget bbox="0.0 0.0 0.0 142.5 95.0 95.0" captureAppVersion="1.0.0" lastSaved="2016-01-16 10:42:41" name="mouse" targetId="f92858367b824215a8f7681fec281d04" version="2.0" />
+    <ObjectTarget bbox="0.0 0.0 0.0 142.5 95.0 95.0" captureAppVersion="1.0.0" lastSaved="2016-01-16 19:56:07" name="Calculator" targetId="771c86fb8b944c1b8de3e2ea20caf1be" version="2.0" />
+    <ObjectTarget bbox="0.0 0.0 0.0 142.5 95.0 95.0" captureAppVersion="1.0.0" lastSaved="2016-01-16 19:42:12" name="BottleOpener" targetId="bb86bce84fb1460a8f1b27ea3ccbea83" version="2.0" />
+    <ObjectTarget bbox="0.0 0.0 0.0 142.5 95.0 95.0" captureAppVersion="1.0.0" lastSaved="2016-01-16 14:08:08" name="Eraser" targetId="68a5e2b41b2742c9840637aacdf2f8fe" version="2.0" />
+  </TargetSet>
+</QCARInfo>

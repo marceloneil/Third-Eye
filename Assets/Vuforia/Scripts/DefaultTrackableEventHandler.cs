@@ -66,61 +66,46 @@ namespace Vuforia
         #region PRIVATE_METHODS
 
 
-		private void OnTrackingFound()
-		{
-			Renderer[] rendererComponents = GetComponentsInChildren<Renderer>();
-			Collider[] colliderComponents = GetComponentsInChildren<Collider>();
+        private void OnTrackingFound()
+        {
+            Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
+            Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 
-			Terrain[] terrainComponents = GetComponentsInChildren<Terrain>();
+            // Enable rendering:
+            foreach (Renderer component in rendererComponents)
+            {
+                component.enabled = true;
+            }
 
-			foreach( Terrain component in terrainComponents )
-			{
-				component.enabled = true;
-			}
+            // Enable colliders:
+            foreach (Collider component in colliderComponents)
+            {
+                component.enabled = true;
+            }
 
-			// Enable rendering:
-			foreach (Renderer component in rendererComponents)
-			{
-				component.enabled = true;
-			}
+            Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
+        }
 
-			// Enable colliders:
-			foreach (Collider component in colliderComponents)
-			{
-				component.enabled = true;
-			}
 
-			Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
+        private void OnTrackingLost()
+        {
+            Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
+            Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 
-		}
+            // Disable rendering:
+            foreach (Renderer component in rendererComponents)
+            {
+                component.enabled = false;
+            }
 
-		private void OnTrackingLost()
-		{
-			Renderer[] rendererComponents = GetComponentsInChildren<Renderer>();
-			Collider[] colliderComponents = GetComponentsInChildren<Collider>();
+            // Disable colliders:
+            foreach (Collider component in colliderComponents)
+            {
+                component.enabled = false;
+            }
 
-			Terrain[] terrainComponents = GetComponentsInChildren<Terrain>();
-
-			foreach( Terrain component in terrainComponents )
-			{
-				component.enabled = false;
-			}
-
-			// Disable rendering:
-			foreach (Renderer component in rendererComponents)
-			{
-				component.enabled = false;
-			}
-
-			// Disable colliders:
-			foreach (Collider component in colliderComponents)
-			{
-				component.enabled = false;
-			}
-
-			Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
-
-		}
+            Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
+        }
 
         #endregion // PRIVATE_METHODS
     }
